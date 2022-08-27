@@ -1,0 +1,23 @@
+.nav-menu {
+  @apply bg-slate-900;
+  // .nav-menu__list
+
+  &__list {
+    @apply p-4;
+  }
+
+  // .nav-menu__item
+
+  &__item {
+    &:not(:last-child) {
+      @apply mb-4;
+    }
+  }
+
+  // .nav-menu__link
+
+  &__link {
+    @apply block p-2 bg-sky-900 rounded-lg;
+    @apply text-white uppercase;
+  }
+}
