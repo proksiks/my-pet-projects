@@ -7,11 +7,6 @@
   </div>
 </template>
 
-<style scoped>
-._layout {
-  display: grid;
-  grid-template-columns: 15rem 1fr;
-  gap: 1rem;
-  min-height: 100vh;
-}
+<style lang="scss">
+@import "~/assets/styles/scss/components/default-layout";
 </style>
