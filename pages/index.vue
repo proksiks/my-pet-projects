@@ -1,11 +1,9 @@
 <template>
-  <div class="bg-gray-300">
-    <h1>Index page</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus dolor doloremque id odit autem facere vitae! Quas quos esse nihil voluptate aspernatur
-      voluptatum nulla molestiae explicabo ipsam necessitatibus, possimus magni.
-    </p>
-  </div>
+  <h1>
+    Тут должна быть информация обо мне, пока её нет можно посмотреть на мои
+    работы
+    <nuxt-link class="text-cyan-400" to="/portfolio"> тут </nuxt-link>
+  </h1>
 </template>
 
 <script>

@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "navigation": [
+      {
+        "link": "/",
+        "icon": "home.svg",
+        "text": "Главная"
+      },
+      {
+        "link": "/portfolio",
+        "icon": "folder.svg",
+        "text": "Портфолио"
+      }
+    ]
+  }
+}

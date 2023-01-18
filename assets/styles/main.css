@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Montserrat:wght@400;600;700&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -9,7 +11,31 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body::-webkit-scrollbar {
+  @apply w-2;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-cyan-700;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-cyan-300;
+  border-radius: 100px;
+  border: 6px solid rgba(0, 0, 0, 0.2);
 }
 .scroll-off {
   overflow: hidden;
+}
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to,
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }

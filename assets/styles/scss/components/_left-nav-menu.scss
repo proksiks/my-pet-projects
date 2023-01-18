@@ -1,19 +1,17 @@
 .nav-menu {
-  @apply fixed top-0 left-0 z-10;
+  @apply fixed top-0 left-0 z-10 transition-transform duration-150;
+  transform: translateX(-10.5rem);
 
   // .nav-menu__holder
 
   &__holder {
-    @apply bg-sky-900 fixed top-0 left-0 w-screen h-screen opacity-0 pointer-events-none transition-opacity duration-300;
+    @apply bg-sky-900 fixed top-0 left-0 w-screen h-screen opacity-0 pointer-events-none transition-opacity duration-150;
   }
 
   &.open {
-    .nav-menu__holder {
+    @apply translate-x-0;
+    ~ .nav-menu__holder {
       @apply opacity-40 pointer-events-auto;
-    }
-
-    .nav-menu__list {
-      @apply translate-x-0;
     }
 
     .nav-menu__link {
@@ -30,9 +28,7 @@
   // .nav-menu__list
 
   &__list {
-    @apply bg-slate-900 p-4 h-screen overflow-y-auto transition-transform duration-300;
-    min-width: 12.5rem;
-    transform: translateX(-8rem);
+    @apply bg-slate-900 p-4 h-screen overflow-y-auto min-w-[15rem];
   }
 
   // .nav-menu__item
@@ -48,7 +44,7 @@
 
   // .nav-menu__burger
   &__burger {
-    @apply relative w-10 h-10 bg-sky-600 rounded-lg transition-all duration-300;
+    @apply relative w-10 h-10 bg-sky-600 rounded-lg transition-all duration-150;
     &:hover {
       @apply bg-sky-500;
     }
@@ -56,7 +52,7 @@
       @apply bg-sky-400;
     }
     span {
-      @apply absolute left-2/4 w-3/4 h-0.5 bg-white -translate-x-2/4 pointer-events-none transition-all duration-300;
+      @apply absolute left-2/4 w-3/4 h-0.5 bg-white -translate-x-2/4 pointer-events-none transition-all duration-150;
       &:first-child {
         @apply top-2;
       }
@@ -85,7 +81,7 @@
   // .nav-menu__link
 
   &__link {
-    @apply cursor-pointer flex justify-between items-center uppercase text-white transition-all font-semibold duration-300;
+    @apply cursor-pointer flex justify-between items-center uppercase text-white transition-all font-semibold duration-150;
   }
 
   // .nav-menu__text
@@ -97,7 +93,7 @@
   // .nav-menu__icon
 
   &__icon {
-    @apply w-10 ml-2 p-2 bg-sky-600 rounded-lg transition-all duration-300;
+    @apply w-10 ml-2 p-2 bg-sky-600 rounded-lg transition-all duration-150;
     &:hover {
       @apply bg-sky-500;
     }
@@ -112,7 +108,7 @@
 
     // .nav-menu__icon_invert
     &_invert img {
-      filter: invert(1);
+      @apply invert;
     }
   }
 

@@ -2,7 +2,10 @@
   <div class="_layout">
     <NavigationMenu />
     <div class="wrapper">
-      <slot />
+      <div class="inner">
+        <slot />
+      </div>
+      <FooterAboutInfo />
     </div>
   </div>
 </template>

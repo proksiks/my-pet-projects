@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "projects": [
+      {
+        "image": null,
+        "link": "todo",
+        "title": "Список задач"
+      },
+      {
+        "image": null,
+        "link": "currency-converter",
+        "title": "Конвертен Валют"
+      }
+    ]
+  }
+}
