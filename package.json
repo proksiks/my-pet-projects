@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
+    "gh-pages": "^4.0.0",
     "nuxt": "3.0.0-rc.8",
     "sass": "^1.54.4",
     "tailwindcss": "^3.1.8"
