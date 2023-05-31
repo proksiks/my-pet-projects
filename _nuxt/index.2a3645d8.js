@@ -1,1 +1,0 @@
-import{a as s,b as t,o,e}from"./entry.d881ef61.js";const _={},n={class:"wrap"},a=e("h1",null,"test",-1),c=e("p",null,"dsadsa",-1),d=[a,c];function r(i,l,p,u,f,h){return o(),t("div",n,d)}const m=s(_,[["render",r]]);export{m as default};

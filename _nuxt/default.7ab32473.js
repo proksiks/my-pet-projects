@@ -1,1 +1,0 @@
-import{a as s,o,b as _,e,f as a,r as l}from"./entry.d881ef61.js";const r={},d={class:"list"},u=e("li",null,"1",-1),i=e("li",null,"2",-1),f=e("li",null,"3",-1),p=[u,i,f];function h(t,c,n,x,N,B){return o(),_("ul",d,p)}const m=s(r,[["render",h]]),$={};function v(t,c){const n=m;return o(),_("div",null,[a(n),l(t.$slots,"default")])}const y=s($,[["render",v]]);export{y as default};
