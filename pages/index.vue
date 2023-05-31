@@ -2,7 +2,7 @@
   <div class="wrap">
     <h1>test</h1>
     <p>dsadsa</p>
-    <nuxt-link to="/about"></nuxt-link>
+    <NuxtLink to="/about">text</NuxtLink>
   </div>
 </template>
 
