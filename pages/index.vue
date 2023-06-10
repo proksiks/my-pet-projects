@@ -10,10 +10,10 @@
   export default {};
 </script>
 
-<style>
+<style lang="scss">
   .wrap {
     width: 100%;
     height: 100vh;
-    background-color: antiquewhite;
+    background-color: var(--color);
   }
 </style>
