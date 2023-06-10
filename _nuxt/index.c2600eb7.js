@@ -1,1 +1,0 @@
-import{_ as o}from"./nuxt-link.185f4654.js";import{a as s,b as _,f as n,w as a,h as e,o as c,e as r}from"./entry.df9c22b3.js";const d={},i={class:"wrap"},p=e("h1",null,"test",-1),l=e("p",null,"dsadsa",-1);function u(x,f,m,h,N,$){const t=o;return c(),_("div",i,[p,l,n(t,{to:"/about"},{default:a(()=>[r("text")]),_:1})])}const w=s(d,[["render",u]]);export{w as default};
