@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "title": "Home",
+      "title": "Главная",
       "href": "/"
     },
     {
-      "title": "About",
-      "href": "/about/"
+      "title": "Пет-проекты",
+      "href": "/projects/"
     }
   ]
 }

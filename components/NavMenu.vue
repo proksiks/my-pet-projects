@@ -17,19 +17,28 @@
 
 <style lang="scss" scoped>
   .nav-menu {
-    position: fixed;
-    left: 0;
-    top: 0;
     height: 100vh;
     overflow-y: auto;
-    background-color: var(--blue);
-    border-radius: 0 10px 10px 0;
+    background-color: var(--dark);
     padding: var(--default-padding);
   }
   .nav-menu__list {
     @include reset-list;
   }
+  .nav-menu__list-item {
+    & + & {
+      margin-top: 1rem;
+    }
+  }
   .nav-menu__list-link {
-    color: var(--white);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    border-radius: 0.3rem;
+    background-color: var(--white);
+    font-weight: 700;
   }
 </style>

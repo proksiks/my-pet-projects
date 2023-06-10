@@ -13,4 +13,17 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  modules: ["nuxt-font-loader"],
+  fontLoader: {
+    local: [
+      {
+        src: "fonts/NotoSans.woff2",
+        fallback: "sans-serif",
+        family: "Noto Sans",
+        weight: "300 400 700",
+        variable: "notosans",
+      },
+    ],
+  },
 });

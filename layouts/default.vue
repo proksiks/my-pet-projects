@@ -17,11 +17,15 @@
   });
 </script>
 
-<style>
+<style lang="scss">
   .wrapper {
+    display: flex;
     padding-left: 88px;
   }
   .main {
+    width: 100%;
+    min-height: 100vh;
     padding: var(--default-padding);
+    background-color: var(--main-layout-bg);
   }
 </style>

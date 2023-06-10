@@ -4,6 +4,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -11,6 +12,15 @@ html {
 }
 
 body {
+  font-family: var(--notosans);
   margin: 0;
   padding: 0;
+  color: var(--white);
+}
+
+a {
+  color: var(--white);
+  &:hover {
+    text-decoration: none;
+  }
 }
