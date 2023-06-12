@@ -19,7 +19,7 @@
   .nav-menu {
     height: 100vh;
     overflow-y: auto;
-    background-color: var(--dark);
+    background-color: var(--left-menu);
     padding: var(--default-padding);
   }
   .nav-menu__list {
@@ -36,7 +36,7 @@
     padding: 1rem 0.5rem;
     display: block;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--left-menu);
     border-radius: 0.3rem;
     background-color: var(--white);
     font-weight: 700;

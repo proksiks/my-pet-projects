@@ -1,7 +1,23 @@
+//Theme
+
 :root {
   --white: white;
   --black: black;
-  --dark: #0e1011;
+  --left-menu: #0e1011;
   --main-layout-bg: #161a1d;
-  --default-padding: 1.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: black;
+    --black: white;
+    --left-menu: #d1d8dc;
+    --main-layout-bg: #bbc7cc;
+  }
+}
+
+//Theme
+
+:root {
+  --default-padding: 1rem;
 }
