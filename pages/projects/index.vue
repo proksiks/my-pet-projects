@@ -3,7 +3,7 @@
     <h1>Проекты</h1>
     <ul>
       <li>
-        <NuxtLink to="/projects/htl-player/">HTL-Player</NuxtLink>
+        <NuxtLink to="/projects/hls-player/">HLS-Player</NuxtLink>
       </li>
     </ul>
   </div>
