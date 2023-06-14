@@ -1,0 +1,1 @@
+import{_ as o}from"./nuxt-link.36fd4a22.js";import{a as n,b as a,h as e,f as s,w as c,o as r,e as l}from"./entry.8267f040.js";const _={},p=e("h1",null,"Проекты",-1);function u(d,i,f,m,x,h){const t=o;return r(),a("div",null,[p,e("ul",null,[e("li",null,[s(t,{to:"/projects/hls-player/"},{default:c(()=>[l("HLS-Player")]),_:1})])])])}const k=n(_,[["render",u]]);export{k as default};
