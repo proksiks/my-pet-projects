@@ -1,12 +1,14 @@
 <template>
   <nav class="nav-menu">
-    <ul class="nav-menu__list">
-      <li class="nav-menu__list-item" v-for="item in header" :key="item.title">
-        <NuxtLink class="nav-menu__list-link" :to="item.href">
-          {{ item.title }}
-        </NuxtLink>
-      </li>
-    </ul>
+    <div class="nav-menu__inner">
+      <ul class="nav-menu__list">
+        <li class="nav-menu__list-item" v-for="item in header" :key="item.title">
+          <NuxtLink class="nav-menu__list-link" :to="item.href">
+            {{ item.title }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>
 
@@ -17,10 +19,15 @@
 
 <style lang="scss" scoped>
   .nav-menu {
-    height: 100vh;
-    overflow-y: auto;
     background-color: var(--left-menu);
+  }
+  .nav-menu__inner {
     padding: var(--default-padding);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow: auto;
+    @include custom-scroll;
   }
   .nav-menu__list {
     @include reset-list;
