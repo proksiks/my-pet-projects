@@ -1,27 +1,31 @@
 //Theme
-
 :root {
   --white: white;
-  --black: #050c13;
-  --left-menu: #0e1011;
-  --main-layout-bg: #161a1d;
-  --el-background: #52616d;
-}
+  --global: #ffffff;
+  --global-invert: #050c13;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --white: #050c13;
-    --black: white;
-    --left-menu: #d1d8dc;
-    --main-layout-bg: #bbc7cc;
-    --el-background: #161a1d;
-  }
-}
+  --main: #0e1011;
+  --main-2: #161a1d;
+  --main-3: #52616d;
 
-//Theme
+  --second: #678299;
 
-:root {
   --default-padding: 1rem;
   --default-radius: 1rem;
   --small-radius: 0.5rem;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --global: #050c13;
+    --global-invert: white;
+
+    --main: #d1d8dc;
+    --main-2: #bbc7cc;
+    --main-3: #161a1d;
+
+    --second: #232b31;
+  }
+}
+
+//Theme

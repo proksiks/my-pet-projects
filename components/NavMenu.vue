@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
   .nav-menu {
-    background-color: var(--left-menu);
+    background-color: var(--main);
   }
   .nav-menu__inner {
     padding: var(--default-padding);
@@ -43,9 +43,9 @@
     padding: 1rem 0.5rem;
     display: block;
     text-decoration: none;
-    color: var(--left-menu);
+    color: var(--main);
     border-radius: 0.3rem;
-    background-color: var(--white);
+    background-color: var(--global);
     font-weight: 700;
   }
 </style>

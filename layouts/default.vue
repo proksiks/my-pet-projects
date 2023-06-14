@@ -17,6 +17,6 @@
     width: 100%;
     min-height: 100vh;
     padding: var(--default-padding);
-    background-color: var(--main-layout-bg);
+    background-color: var(--main-2);
   }
 </style>
