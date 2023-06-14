@@ -2,20 +2,19 @@
 
 :root {
   --white: white;
-  --black: black;
+  --black: #050c13;
   --left-menu: #0e1011;
   --main-layout-bg: #161a1d;
-
-  --scroll-bar-track: #fff;
-  --scroll-bar-thumb: #ddd;
+  --el-background: #52616d;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --white: black;
+    --white: #050c13;
     --black: white;
     --left-menu: #d1d8dc;
     --main-layout-bg: #bbc7cc;
+    --el-background: #161a1d;
   }
 }
 
@@ -23,4 +22,6 @@
 
 :root {
   --default-padding: 1rem;
+  --default-radius: 1rem;
+  --small-radius: 0.5rem;
 }

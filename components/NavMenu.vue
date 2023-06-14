@@ -27,7 +27,7 @@
     position: sticky;
     top: 0;
     overflow: auto;
-    @include custom-scroll;
+    @include hide-scroll;
   }
   .nav-menu__list {
     @include reset-list;
