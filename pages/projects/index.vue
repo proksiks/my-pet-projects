@@ -5,6 +5,9 @@
       <li>
         <NuxtLink to="/projects/hls-player/">HLS-Player</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/projects/todo/">Todo</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
@@ -13,4 +16,12 @@
   export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+  ul {
+    li {
+      + li {
+        margin-top: 1rem;
+      }
+    }
+  }
+</style>
