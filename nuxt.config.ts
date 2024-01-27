@@ -1,8 +1,10 @@
 import svgLoader from 'vite-svg-loader'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   app: {
     baseURL: "/my-pet-projects/",
+    pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["normalize.css/normalize.css"],
   vite: {
