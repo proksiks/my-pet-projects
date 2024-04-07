@@ -23,11 +23,13 @@
   }
   .nav-menu__inner {
     padding: var(--default-padding);
-    height: 100vh;
     position: sticky;
     top: 0;
     overflow: auto;
     @include hide-scroll;
+    @media (min-width: 420px) {
+      height: 100vh;
+    }
   }
   .nav-menu__list {
     @include reset-list;

@@ -1,0 +1,94 @@
+{
+  "list": [
+    {
+      "link": "https://proksiks.github.io/nero/",
+      "img": "/images/projects/nero.jpg",
+      "title": "Демо экран для заказчика"
+    },
+    {
+      "link": "https://www.haulmont.ru/",
+      "img": "/images/projects/haulmont.jpg",
+      "title": "Разработка сайта Haulmont"
+    },
+    {
+      "link": "https://job.haulmont.ru/",
+      "img": "/images/projects/job.jpg",
+      "title": "Разработка сайта Haulmont Vacancy"
+    },
+    {
+      "link": "https://www.jmix.io/",
+      "img": "/images/projects/jmix.jpg",
+      "title": "Разработка сайта Jmix"
+    },
+    {
+      "link": "https://www.tezis-doc.ru/customers/case_studies/bat/",
+      "img": "/images/projects/tezis.jpg",
+      "title": "Разработка сайта Tezis"
+    },
+    {
+      "link": "https://www.sherlocktaxi.com/",
+      "img": "/images/projects/sherlock.jpg",
+      "title": "Разработка сайта Sherlock"
+    },
+    {
+      "link": "https://haulmont.tech/",
+      "img": "/images/projects/tech.jpg",
+      "title": "Разработка сайта Haulmont Tech"
+    },
+    {
+      "link": "https://jpa-buddy.com/",
+      "img": "/images/projects/jpa.jpg",
+      "title": "Разработка сайта Jpa Buddy"
+    },
+    {
+      "link": "https://amplicode.ru/",
+      "img": "/images/projects/amplicode.jpg",
+      "title": "Разработка сайта Amplicode"
+    },
+    {
+      "link": "https://ibeauty.ru/",
+      "img": "/images/projects/ibeauty.jpg",
+      "title": "Вёрстка сайта iBEAUTY"
+    },
+    {
+      "link": "https://kdi-samara.ru/",
+      "img": "/images/projects/kdi.jpg",
+      "title": "Вёрстка сайта Клиника Дентальной Имплантации"
+    },
+    {
+      "link": "https://cosmettrade.ru/",
+      "img": "/images/projects/comettrade.jpg",
+      "title": "Вёрстка сайта Препараты для косметологии"
+    },
+    {
+      "link": "https://proksiks.github.io/movies/",
+      "img": "/images/projects/movies.jpg",
+      "title": "Список фильмов кинопоиск"
+    },
+    {
+      "link": "https://proksiks.github.io/panagency/index.html",
+      "img": "/images/projects/pan-agency.jpg",
+      "title": "Лендинг для строительной компании"
+    },
+    {
+      "link": "https://proksiks.github.io/idaproject/",
+      "img": "/images/projects/idaproject.jpg",
+      "title": "Тестовое задание"
+    },
+    {
+      "link": "https://proksiks.github.io/portfolio/app/index.html",
+      "img": "/images/projects/eldas.jpg",
+      "title": "Вёрстка бесплатного макета из интернета"
+    },
+    {
+      "link": "/projects/hls-player/",
+      "img": "/images/projects/hls-player.jpg",
+      "title": "HLS-Player"
+    },
+    {
+      "link": "https://codesandbox.io/p/sandbox/todolist-forked-5xgcwt?file=%2Fsrc%2Fmain.js",
+      "img": "/images/projects/todo.jpg",
+      "title": "Тудушка на vue2 codesandbox"
+    }
+  ]
+}

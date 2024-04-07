@@ -11,7 +11,9 @@
 
 <style lang="scss">
   .wrapper {
-    display: flex;
+    @media (min-width: 420px) {
+      display: flex;
+    }
   }
   .main {
     width: 100%;

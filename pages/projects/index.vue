@@ -1,60 +1,85 @@
 <template>
   <div>
-    <h1>Проекты</h1>
-    <ul>
-      <li>
-        <NuxtLink to="/projects/hls-player/">HLS-Player (Плеер для проигрывания потокового видео)</NuxtLink>
+    <h1 class="projects-title">Проекты {{list.length}} шт</h1>
+    <ul class="projects-list" v-if="list">
+      <li class="projects-item" v-for="item in list" :key="item.link">
+        <NuxtLink class="projects-card" :to="item.link" :target="isExternalLink(item.link)">
+          <div class="projects-picture" v-if="item.img">
+            <img class="projects-img" :src="item.img" :alt="item.title" />
+          </div>
+          <div class="projects-descr" v-if="item.title">{{ item.title }}</div>
+        </NuxtLink>
       </li>
-      <li>
-        <NuxtLink to="/projects/zoom/">Zoom (Alpha) (Масштабирование и перемещение элемента альфа версия)</NuxtLink>
-      </li>
-      <li>
-        <a href="https://proksiks.github.io/nero/" target="_blank">Демо экран для производителя жидкостей 20т.р</a>
-      </li>
-      <li>
-        <a href="https://proksiks.github.io/movies/" target="_blank">Список фильмов с формой (работа с api)</a>
-      </li>
-      <li>
-        <a href="https://proksiks.github.io/modal/" target="_blank">Модальное окно</a>
-      </li>
-      <li>
-        <a href="https://proksiks.github.io/panagency/index.html" target="_blank">Лендинг для строительной компании</a>
-      </li>
-      <li>
-        <a href="https://proksiks.github.io/idaproject/" target="_blank">Тестовое задание</a>
-      </li>
-      <li>
-        <a href="https://kdi-samara.ru/" target="_blank">Вёрстка для стаматологической клинники</a>
-      </li>
-      <li>
-        <a href="https://cosmettrade.ru/" target="_blank">Вёрстка для продажи косметики</a>
-      </li>
-      <li>
-        <a href="https://www.haulmont.ru/" target="_blank">Разработка корпоративного сайта</a>
-      </li>
-      <li>
-        <a href="https://proksiks.github.io/portfolio/app/index.html" target="_blank">Вёрстка бесплатного макета из интернета</a>
-      </li>
-      <li>
-        <a href="https://codesandbox.io/p/sandbox/todolist-forked-5xgcwt?file=%2Fsrc%2Fmain.js" target="_blank">Тудушка на vue2 codesandbox</a>
-      </li>
-      <!--<li>
-        <NuxtLink to="/projects/todo/">Todo</NuxtLink>
-      </li>-->
     </ul>
   </div>
 </template>
 
-<script>
-  export default {};
+<script setup lang="ts">
+  import { list } from "~/content/Projects.json";
+  const isExternalLink = (Link: string) => {
+    return Link.includes("http") ? "_blank" : "";
+  };
 </script>
 
 <style lang="scss" scoped>
-  ul {
-    li {
-      + li {
-        margin-top: 1rem;
-      }
+  .projects-title {
+    color: white;
+  }
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    @media (max-width: 1440px) {
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
     }
+    @media (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .projects-card {
+    text-decoration: none;
+    height: 100%;
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(33, 43, 48, 0.4);
+    box-shadow: 0 1rem 1.25rem -0.75rem rgba(62, 83, 92, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    &:hover {
+      background-color: rgba(33, 43, 48, 1);
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.5rem 0.2rem 0.3rem rgba(54, 115, 139, 0.6);
+    }
+  }
+  .projects-picture {
+    position: relative;
+    padding-bottom: 49%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  .projects-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    aspect-ratio: 16/8;
+    object-fit: cover;
+  }
+  .projects-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .projects-descr {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    line-height: 1.45;
   }
 </style>
