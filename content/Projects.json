@@ -1,6 +1,11 @@
 {
   "list": [
     {
+      "link": "https://proksiks.github.io/agata-demo/user-index.html",
+      "img": "/my-pet-projects/images/projects/agata.png",
+      "title": "Вёрстка приложение работы с трафиком"
+    },
+    {
       "link": "https://proksiks.github.io/nero/",
       "img": "/my-pet-projects/images/projects/nero.jpg",
       "title": "Демо экран для заказчика"
