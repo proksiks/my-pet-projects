@@ -26,13 +26,20 @@
     position: sticky;
     top: 0;
     overflow: auto;
-    @include hide-scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     @media (min-width: 420px) {
       height: 100vh;
     }
   }
   .nav-menu__list {
-    @include reset-list;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
   .nav-menu__list-item {
     & + & {

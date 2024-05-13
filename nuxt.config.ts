@@ -1,30 +1,24 @@
 import svgLoader from 'vite-svg-loader'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
   app: {
     baseURL: "/my-pet-projects/",
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      htmlAttrs: {
+        lang: 'ru',
+      },
     }
   },
   css: ["normalize.css/normalize.css"],
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "@/assets/scss/global.scss" as *;',
-        },
-      },
-    },
     plugins: [
       svgLoader(),
     ],
   },
-
-  modules: ["nuxt-font-loader"],
+  modules: ["nuxt-font-loader", "@nuxt/image"],
   fontLoader: {
     local: [
       {
