@@ -6,9 +6,9 @@
         <div class="projects-box">
           <NuxtLink class="projects-card" :to="item.link" :target="isExternalLink(item.link)">
             <div class="projects-picture" v-if="item.img">
-              <img class="projects-img" :src="item.img" :alt="item.title" />
+              <img class="projects-img" :src="item.img" v-if="item.title" :alt="item.title" loading="lazy" />
             </div>
-            <img class="projects-feedback" v-if="item.feedbackShow" :src="item.feedback" :alt="item.title" />
+            <img class="projects-feedback" v-if="item.feedbackShow" :src="item.feedback" :alt="item.title" loading="lazy" />
             <div class="projects-descr" v-if="item.title">
               {{ item.title }} <br />
               <span v-if="item.time">Затраченное время {{ item.time }}ч</span>

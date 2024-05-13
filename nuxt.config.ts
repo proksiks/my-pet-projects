@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/my-pet-projects/",
     pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
   },
   css: ["normalize.css/normalize.css"],
   vite: {
