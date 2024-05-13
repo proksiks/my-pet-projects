@@ -10,6 +10,7 @@
 <script setup lang="ts">
   useHead({
     meta: [{ name: "description", content: "My amazing site." }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
   });
   useSeoMeta({
     title: "My Amazing Site",
