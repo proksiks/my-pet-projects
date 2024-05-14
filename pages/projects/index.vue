@@ -66,12 +66,8 @@
     display: block;
     max-width: 100%;
     width: 100%;
-    height: 100%;
     margin: 1rem 0;
-    * {
-      border-radius: 0.5rem;
-      max-width: 100%;
-    }
+    border-radius: 0.5rem;
   }
   .projects-subtitle {
     margin-right: 0.5rem;
