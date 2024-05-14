@@ -3,7 +3,7 @@
     {
       "link": "https://proksiks.github.io/agata-demo/user-index.html",
       "img": "images/projects/agata.png",
-      "feedback": "images/feedbacks/agata-rev.png",
+      "feedback": "/my-pet-projects/images/feedbacks/agata-rev.png",
       "feedbackShow": false,
       "title": "Приложение для работы с трафиком",
       "tags": ["Вёрстка"],
