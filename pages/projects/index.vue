@@ -6,7 +6,7 @@
         <div class="projects-box">
           <NuxtLink class="projects-card" :to="item.link" :target="isExternalLink(item.link)">
             <NuxtPicture class="projects-img" :src="item.img" v-if="item.title" :alt="item.title" format="avif" loading="lazy" width="383" height="192" />
-            <NuxtPicture class="projects-feedback" :src="item.feedback" v-if="item.feedbackShow" :alt="item.title" format="avif" loading="lazy" />
+            <img class="projects-feedback" :src="item.feedback" v-if="item.feedbackShow" :alt="item.title" loading="lazy" />
           </NuxtLink>
           <NuxtLink class="projects-descr" :to="item.link" v-if="item.title" :target="isExternalLink(item.link)">
             {{ item.title }}
@@ -34,9 +34,6 @@
 </script>
 
 <style lang="scss">
-  .projects-title {
-    color: white;
-  }
   .projects-list-items {
     list-style-type: none;
     padding: 0;
@@ -155,6 +152,7 @@
   .projects-title {
     font-size: 2rem;
     font-weight: 700;
+    color: var(--white);
   }
   .projects-descr {
     width: 100%;
