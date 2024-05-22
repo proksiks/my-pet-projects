@@ -23,7 +23,58 @@
 </script>
 
 <style lang="scss">
-  @import "~/assets/css/index.css";
+  :root {
+    --white: white;
+    --global: #ffffff;
+    --global-invert: #050c13;
+
+    --main: #0e1011;
+    --main-2: #161a1d;
+    --main-3: #52616d;
+
+    --second: #678299;
+
+    --default-padding: 1rem;
+    --default-radius: 1rem;
+    --small-radius: 0.5rem;
+
+    --cyanide: #77f8da
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: var(--notosans);
+    margin: 0;
+    padding: 0;
+    color: var(--global);
+  }
+
+  a {
+    color: var(--global);
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.3s;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
+  }
+
   .wrapper {
     @media (min-width: 420px) {
       display: flex;

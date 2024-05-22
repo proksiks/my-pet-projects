@@ -24,8 +24,8 @@
       "link": "https://www.haulmont.ru/",
       "img": "images/projects/haulmont.jpg",
       "title": "Haulmont",
-      "tags": ["Вёрстка", "Разработка", "Frontend", "Backend", "FullStack", "Pinia"],
-      "technologies": ["Vue 2", "Nuxt 2", "Strapi", "Scss", "Webpack"],
+      "tags": ["Вёрстка", "Разработка", "Frontend", "Backend", "FullStack"],
+      "technologies": ["Vue 2", "Nuxt 2", "Strapi", "Scss", "Pinia"],
       "time": 336
     },
     {
