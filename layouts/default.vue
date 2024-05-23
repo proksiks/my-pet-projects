@@ -38,7 +38,8 @@
     --default-radius: 1rem;
     --small-radius: 0.5rem;
 
-    --cyanide: #77f8da
+    --cyanide: #77f8da;
+    --cyanide-dark: #77f8da;
   }
 
   html {
