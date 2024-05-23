@@ -1,11 +1,19 @@
 <template>
   <div>
     <div class="projects-head">
-      <h1 class="projects-title">Проекты {{ list.length }} шт</h1>
-      <button class="projects-filter" @click="handleOpenMenu">Фильтр</button>
+      <h1 class="projects-title">Проекты {{ filteredWorks.length }} шт</h1>
+      <button class="projects-filter" @click="toggleMenu">Фильтр</button>
     </div>
-    <ul class="projects-list" v-if="list">
-      <li class="projects-item" v-for="item in reactiveList" :key="item.link">
+    <TransitionGroup
+      class="projects-list"
+      tag="ul"
+      :css="false"
+      @before-enter="onBeforeEnter"
+      @enter="onEnter"
+      @leave="onLeave"
+      v-if="list"
+    >
+      <li class="projects-item" v-for="(item, index) in filteredWorks" :key="item.link" :data-index="index">
         <div class="projects-box">
           <NuxtLink class="projects-card" :to="item.link" :target="isExternalLink(item.link)">
             <NuxtPicture
@@ -22,7 +30,7 @@
               <img
                 class="projects-feedback"
                 :src="item.feedback"
-                v-if="item.feedbackShow"
+                v-show="item.feedbackShow"
                 :alt="item.title"
                 loading="lazy"
               />
@@ -47,7 +55,7 @@
           </button>
         </div>
       </li>
-    </ul>
+    </TransitionGroup>
 
     <div class="projects-menu" :class="{ 'projects-menu-open': isOpenMenu }">
       <div>
@@ -57,7 +65,7 @@
       <ul class="projects-menu-list">
         <li class="projects-menu-item" v-for="tech in uniqueData.technologies">
           <label class="projects-menu-label">
-            <input class="projects-menu-checkbox" type="checkbox" placeholder="text" />
+            <input class="projects-menu-checkbox" v-model="filter" :value="tech" type="checkbox" placeholder="text" />
             <span class="projects-menu-text">{{ tech }}</span>
           </label>
         </li>
@@ -66,15 +74,15 @@
       <ul class="projects-menu-list">
         <li class="projects-menu-item" v-for="tag in uniqueData.tags">
           <label class="projects-menu-label">
-            <input class="projects-menu-checkbox" type="checkbox" placeholder="text" />
+            <input class="projects-menu-checkbox" v-model="filter" :value="tag" type="checkbox" placeholder="text" />
             <span class="projects-menu-text">{{ tag }}</span>
           </label>
         </li>
       </ul>
       <div class="projects-menu-footer">
-        <button class="projects-menu-reset">Очистить</button>
+        <button class="projects-menu-reset" @click="clearFilter">Очистить</button>
       </div>
-      <button class="projects-menu-burger" @click="isOpenMenu = false">
+      <button class="projects-menu-burger" @click="isOpenMenu = false" aria-label="Открыть меню с фильтрами">
         <span></span>
         <span></span>
       </button>
@@ -83,9 +91,14 @@
 </template>
 
 <script setup lang="ts">
+  import gsap from "gsap";
+  import { shuffle as _shuffle } from 'lodash-es'
   import { list } from "~/content/Projects.json";
+
   const isOpenMenu = ref(false);
   const reactiveList = reactive(list);
+  const filter = ref([]);
+
   const isExternalLink = (Link: string) => {
     return Link.includes("http") ? "_blank" : "";
   };
@@ -111,9 +124,52 @@
     return result;
   });
 
-  const handleOpenMenu = () => {
+  const filteredWorks = computed(() => {
+    let filtered = reactiveList.filter((item) => {
+      let valid = false;
+      if (filter.value.length > 0) {
+        for (let n = 0; n < item.tags.length; n++) {
+          if (filter.value.includes(item.tags[n])) {
+            valid = true;
+            break;
+          }
+        }
+        for (let n = 0; n < item.technologies.length; n++) {
+          if (filter.value.includes(item.technologies[n])) {
+            valid = true;
+            break;
+          }
+        }
+        if (!valid) return false;
+      }
+      return true;
+    });
+    return filtered;
+  });
+
+  const toggleMenu = () => {
     isOpenMenu.value = !isOpenMenu.value;
   };
+
+  const clearFilter = () => {
+    filter.value = []
+  }
+
+  function onEnter(el: gsap.TweenTarget, done: any) {
+    gsap.to(el, {
+      scale: 1,
+      opacity: 1,
+      onComplete: done,
+    });
+  }
+
+  function onLeave(el: gsap.TweenTarget, done: any) {
+    gsap.to(el, {
+      scale: 0,
+      opacity: 0,
+      onComplete: done,
+    });
+  }
 </script>
 
 <style lang="scss">
