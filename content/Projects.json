@@ -1,6 +1,18 @@
 {
   "list": [
     {
+      "link": "https://proksiks.github.io/greatYa.github.io/",
+      "img": "images/projects/greatYa.png",
+      "feedback": "/my-pet-projects/images/feedbacks/greatYa-rev.png",
+      "feedbackShow": false,
+      "title": "Харизмы",
+      "tags": ["Frontend", "Вёрстка"],
+      "technologies": ["Nuxt", "Tailwind", "Vue 3", "GSAP"],
+      "time": 36,
+      "priceHour": 2000,
+      "totalPrice": "72 000т.р"
+    },
+    {
       "link": "https://proksiks.github.io/agata-demo/user-index.html",
       "img": "images/projects/agata.png",
       "feedback": "/my-pet-projects/images/feedbacks/agata-rev.png",
@@ -17,7 +29,7 @@
       "img": "images/projects/nero.png",
       "title": "Демо экран",
       "tags": ["Вёрстка"],
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
       "time": 20
     },
     {
