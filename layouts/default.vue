@@ -77,6 +77,7 @@
   }
 
   .wrapper {
+    overflow: hidden;
     @media (min-width: 420px) {
       display: flex;
     }
