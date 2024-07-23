@@ -2,11 +2,13 @@
   "items": [
     {
       "title": "Главная",
-      "href": "/"
+      "href": "/",
+      "classIcon": "bx-grid-alt"
     },
     {
       "title": "Проекты",
-      "href": "/projects/"
+      "href": "/projects/",
+      "classIcon": "bxs-devices"
     }
   ]
 }

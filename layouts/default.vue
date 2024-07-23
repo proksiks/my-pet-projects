@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <NavMenu />
+    <ui-navigation-menu />
     <main class="main">
       <slot />
     </main>
@@ -10,7 +10,10 @@
 <script setup lang="ts">
   useHead({
     meta: [{ name: "description", content: "My amazing site." }],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/my-pet-projects/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/my-pet-projects/favicon.ico" },
+      { rel: "stylesheet", href: "https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" },
+    ],
   });
   useSeoMeta({
     title: "My Amazing Site",
@@ -28,8 +31,8 @@
     --global: #ffffff;
     --global-invert: #050c13;
 
-    --main: #0e1011;
-    --main-2: #161a1d;
+    --main: rgb(14, 16, 17);
+    --main-2: rgb(22, 26, 29);
     --main-3: #52616d;
 
     --second: #678299;
@@ -44,6 +47,18 @@
 
   html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    --main-color: 22, 26, 29;
+    --dark: rgb(var(--main-color));
+    --dark-75: rgba(var(--main-color), 0.75);
+    --dark-20: rgba(var(--main-color), 0.2);
+    --dark-0: rgba(var(--main-color), 0);
+    --light: #00ffff;
+    --white: white;
+    --gray-light: #ebebeb;
+    --gray-second: #b6b6b6;
+    --shadow-horizontal: linear-gradient(180deg, var(--dark), var(--dark-0));
+    --shadow-vertical: linear-gradient(90deg, var(--dark), var(--dark-0));
   }
 
   *,
@@ -81,11 +96,18 @@
     @media (min-width: 420px) {
       display: flex;
     }
+    &:has(.sidebar.active) .main {
+      padding-left: 166px;
+    }
   }
   .main {
     width: 100%;
     min-height: 100vh;
-    padding: var(--default-padding);
+    padding-top: var(--default-padding);
+    padding-bottom: var(--default-padding);
+    padding-right: var(--default-padding);
+    padding-left: 88px;
     background-color: var(--main-2);
+    transition: padding 0.6s ease;
   }
 </style>
