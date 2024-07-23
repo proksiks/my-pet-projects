@@ -91,8 +91,8 @@
 </template>
 
 <script setup lang="ts">
-  import gsap from "gsap";
-  import { shuffle as _shuffle } from 'lodash-es'
+  //import gsap from "gsap";
+  //import { shuffle as _shuffle } from 'lodash-es'
   import { list } from "~/content/Projects.json";
 
   const isOpenMenu = ref(false);
@@ -155,21 +155,21 @@
     filter.value = []
   }
 
-  function onEnter(el: gsap.TweenTarget, done: any) {
-    gsap.to(el, {
-      scale: 1,
-      opacity: 1,
-      onComplete: done,
-    });
-  }
+  //function onEnter(el: gsap.TweenTarget, done: any) {
+  //  gsap.to(el, {
+  //    scale: 1,
+  //    opacity: 1,
+  //    onComplete: done,
+  //  });
+  //}
 
-  function onLeave(el: gsap.TweenTarget, done: any) {
-    gsap.to(el, {
-      scale: 0,
-      opacity: 0,
-      onComplete: done,
-    });
-  }
+  //function onLeave(el: gsap.TweenTarget, done: any) {
+  //  gsap.to(el, {
+  //    scale: 0,
+  //    opacity: 0,
+  //    onComplete: done,
+  //  });
+  //}
 </script>
 
 <style lang="scss">
