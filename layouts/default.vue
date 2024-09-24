@@ -98,6 +98,9 @@
     }
     &:has(.sidebar.active) .main {
       padding-left: 166px;
+      @media (max-width: 480px) {
+        padding-left: 125px;
+      }
     }
   }
   .main {
@@ -109,5 +112,8 @@
     padding-left: 88px;
     background-color: var(--main-2);
     transition: padding 0.6s ease;
+    @media (max-width: 480px) {
+      padding-left: 50px;
+    }
   }
 </style>

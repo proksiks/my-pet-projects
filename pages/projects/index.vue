@@ -26,7 +26,7 @@
               width="383"
               height="192"
             />
-            <Transition mode="out-in">
+            <!--<Transition mode="out-in">
               <img
                 class="projects-feedback"
                 :src="item.feedback"
@@ -34,7 +34,7 @@
                 :alt="item.title"
                 loading="lazy"
               />
-            </Transition>
+            </Transition>-->
           </NuxtLink>
           <NuxtLink class="projects-descr" :to="item.link" v-if="item.title" :target="isExternalLink(item.link)">
             {{ item.title }}
@@ -50,9 +50,9 @@
               <span class="projects-tag" v-for="technolgy in item.technologies">{{ technolgy }}</span>
             </li>
           </ul>
-          <button class="projects-button" v-if="item.feedback" @click="item.feedbackShow = !item.feedbackShow">
+          <!--<button class="projects-button" v-if="item.feedback" @click="item.feedbackShow = !item.feedbackShow">
             Отзыв
-          </button>
+          </button>-->
         </div>
       </li>
     </TransitionGroup>
@@ -297,6 +297,10 @@
     background-color: rgba(33, 43, 48, 0.4);
     box-shadow: 0 1rem 1.25rem -0.75rem rgba(62, 83, 92, 0.4);
     transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+
+    @media (max-width: 480px) {
+      padding: 0.5rem;
+    }
     &:hover {
       background-color: rgba(33, 43, 48, 1);
       transform: translateY(-0.5rem);
@@ -327,6 +331,10 @@
     overflow: hidden;
     padding-bottom: 50%;
 
+    @media (max-width: 480px) {
+      padding-bottom: 66%;
+    }
+
     * {
       display: block;
       position: absolute;
@@ -342,6 +350,9 @@
     font-size: 2rem;
     font-weight: 700;
     color: var(--white);
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
   }
   .projects-descr {
     font-size: 1.25rem;

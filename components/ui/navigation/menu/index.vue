@@ -99,9 +99,16 @@
     margin: 0 0.625rem;
     overflow: hidden;
     transition: width 0.6s ease;
+    @media (max-width: 480px) {
+      margin: 0 0.3125rem;
+      width: 2.5rem;
+    }
   }
   .sidebar.active {
     width: 9.0625rem;
+    @media (max-width: 480px) {
+      width: 7rem;
+    }
   }
   .sidebar.active .sidebar-name {
     opacity: 1;
@@ -151,9 +158,11 @@
     color: var(--white);
     font-size: 1.375rem;
     padding: 0.875rem;
-    padding: 0.875rem;
     border-radius: 0.5rem;
     transition: color 0.3s ease, background-color 0.6s ease;
+    @media (max-width: 480px) {
+      padding: 0.5rem;
+    }
   }
   .sidebar-button {
     display: block;
@@ -227,6 +236,11 @@
     white-space: nowrap;
     padding-right: 1rem;
     padding-left: 1rem;
+    @media (max-width: 480px) {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      min-height: 2.5rem;
+    }
   }
 
   .sidebar-button-icon {
@@ -240,6 +254,10 @@
     flex-shrink: 0;
     transform-origin: center;
     transition: transform 0.3s ease;
+    @media (max-width: 480px) {
+      line-height: 2.5rem;
+      padding-right: 0.5rem;
+    }
   }
 
   .sidebar-list {
@@ -267,6 +285,10 @@
     font-weight: 400;
     opacity: 0;
     transition: all 0.3s ease;
+
+    @media (max-width: 480px) {
+      font-size: 0.75rem;
+    }
   }
 
   .sidebar-name-text {
@@ -315,6 +337,11 @@
     line-height: 3.125rem;
     transform: translate(0);
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+    @media (max-width: 480px) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
   .sidebar-menu-button.active {
     color: var(--dark);
